@@ -1,12 +1,13 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
+import { createSlice } from "@reduxjs/toolkit"
 
 
 export const Slice = createSlice({
-  name: "task",
+  name: "user",
   initialState: {
     homePageFlag: 'dashboard',
     menuFlag: 'true',
-    searchValue: ''
+    searchValue: '',
+    user: ''
   },
   reducers: {
     setHomePageFlag: (state, action) => {
@@ -18,8 +19,11 @@ export const Slice = createSlice({
     setSearchValue: (state, action) => {
       state.searchValue = action.payload
     },
+    setUser: (state, action) => {
+      state.user = action.payload
+    },
   },
 })
 
-export const { setHomePageFlag, setMenuFlag, setSearchValue} = Slice.actions;
+export const { setHomePageFlag, setMenuFlag, setSearchValue, setUser } = Slice.actions;
 export default Slice.reducer 

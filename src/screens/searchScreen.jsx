@@ -27,7 +27,8 @@ const SearchScreen = () => {
         <input
          type="text"
           placeholder='Search users by their role!'
-          className='border border-black rounded w-64 text-center mr-2'
+          className='border border-black rounded w-40
+           xl:w-64 md:w-56 text-sm md:text-base xl:text-xl text-center mr-2'
           onChange={(e)=>handleChange(e)}
           value={search}/>
           <input 
